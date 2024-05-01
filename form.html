@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form İşlemleri</title>
+  </head>
+  <body>
+    <form>
+      <p>Ad:<input name="ad" /></p>
+      <p>Soyad:<input name="soyad" /></p>
+      <p>E-posta:<input type="email" name="mail" /></p>
+      <p>Parola: <input type="password" name="password" /></p>
+      <p>Parolayı hatırla <input type="checkbox" name="parolaHatirla" /></p>
+      <p>
+        Cinsiyetiniz:<br />
+        Erkek <input type="radio" name="cinsiyet" /> Kadın
+        <input type="radio" name="cinsiyet" />
+      </p>
+      <p>
+        Hobileriniz: <br />
+        Kitap Okumak<input type="checkbox" name="hobi" /> Film İzlemek<input
+          type="checkbox"
+          name="hobi"
+        />
+        Spor Yapmak<input type="checkbox" name="hobi" />
+      </p>
+      <p>
+        Doğum Yeriniz: <br />
+        <select name="dogumYeri">
+          <option value="">Eskişehir</option>
+          <option value="">Sakarya</option>
+          <option value="">Ankara</option>
+        </select>
+      </p>
+      <p>
+        Doğum Yeriniz: <br />
+        <select multiple name="dogumYeri">
+          <option value="">Eskişehir</option>
+          <option value="">Sakarya</option>
+          <option value="">Ankara</option>
+        </select>
+      </p>
+    </form>
+  </body>
+</html>

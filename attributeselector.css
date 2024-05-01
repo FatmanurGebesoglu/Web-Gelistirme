@@ -1,0 +1,20 @@
+h2[title="baslik1"]{
+    color: red;
+}
+
+p[title="paragraf1"]{
+    color: palevioletred;
+    text-align: justify;
+}
+
+a[target="_blank"]{
+    color: darkgoldenrod;
+}
+
+input[type="text"]{
+    background-color: bisque;
+}
+
+input[type="button"]{
+    background-color: lightsteelblue;
+}
