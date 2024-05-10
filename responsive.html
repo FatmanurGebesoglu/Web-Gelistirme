@@ -13,7 +13,16 @@
         h1{
             font-size: 25px;
         }
-        @media screen and (max-width:700px){
+        @media screen and (max-width:900px){
+            h1{
+                font-size: 30px;
+                color: red;
+            }
+            .kutu{
+                width: 33.33%;
+            }
+        }
+        @media screen and (max-width:600px){
             h1{
                 font-size: 30px;
                 color: red;
@@ -31,21 +40,36 @@
                 width: 100%;
             }
         }
+
         .kutu{
             width: 25%;
-            height: 250px;
+            
             background-color: aquamarine;
             float: left;
             border: 1px solid black;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-    <div class="kutu"></div>
-    <div class="kutu"></div>
-    <div class="kutu"></div>
-    <div class="kutu"></div>
-    <div class="kutu"></div>
+    <div class="kutu">
+        <img src="images/images.jpeg" alt="">
+    </div>
+    <div class="kutu">
+        <img src="images/indir.jpeg" alt="">
+    </div>
+    <div class="kutu">
+        <img src="images/images.jpeg" alt="">
+    </div>
+    <div class="kutu">
+        <img src="images/images.jpeg" alt="">
+    </div>
+    <div class="kutu">
+        <img src="images/images.jpeg" alt="">
+    </div>
 </body>
 </html>
