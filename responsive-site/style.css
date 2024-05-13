@@ -29,6 +29,11 @@ header {
     height: 46rem;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 header .bg-image{
     position: absolute;
     background-image: url(images/bg.jpg);
@@ -60,3 +65,26 @@ header h1 {
     color: #333;
 }
 
+#section-a {
+    background-color: #aeaeae;
+    color: #333;
+    padding: 3.2rem 0;
+}
+
+#section-b {
+    padding: 2rem;
+}
+
+#section-b ul {
+    list-style: none;
+}
+
+#section-b li {
+    background: #fff;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.col-content {
+    padding: 1.5rem;
+}
