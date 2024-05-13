@@ -88,3 +88,26 @@ header h1 {
 .col-content {
     padding: 1.5rem;
 }
+
+#section-c {
+    background-color: #aeaeae;
+    color: #333;
+    padding: 5rem;
+}
+
+#section-d .box{
+    padding: 5rem;
+}
+
+#section-d .box:first-child{
+    background-color: darkslategray;
+}
+
+footer{
+    padding: 4rem;
+    background: black;
+}
+
+footer a {
+    color: yellowgreen;
+}
