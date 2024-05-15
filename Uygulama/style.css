@@ -240,6 +240,10 @@ nav {
         font-size: 3rem;
     }
 
+    #nav-links.responsive li:not(:first-child){
+        display: none;
+    }
+
 }
 
 /*Header*/

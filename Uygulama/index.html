@@ -34,7 +34,7 @@
           <a href="/" class="logo text-uppercase"> Start Bootstrap </a>
         </div>
 
-        <div id="nav-links">
+        <div id="nav-links" class="responsive">
           <ul>
             <li class="nav-item text-uppercase nav-icon">
               <a href="#" class="nav-link"> 
@@ -256,5 +256,15 @@
         <small>Copyright @ Your Website 2024</small>
       </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+
+    <script>
+      $(".nav-icon").click(function(){
+        $("#nav-links").toggleClass("responsive");
+        return false;
+      });
+    </script>
+
   </body>
 </html>
