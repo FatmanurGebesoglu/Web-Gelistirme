@@ -170,10 +170,6 @@ hr.star-dark {
 
 /* portfolio */
 
-#portfolio {
-
-}
-
 #portfolio h2 {
     font-size: 4.8rem;
     color: #2D3D4F;
@@ -225,4 +221,38 @@ hr.star-dark {
 .portfolio-item:hover .img-overlay {
     opacity: 0.8;
     border-radius: 13px;
+}
+
+
+#about {
+    background-color: #1ABC9B;
+    color: #fff;
+}
+
+#about h2 {
+    font-size: 4.8rem;
+}
+
+#about-text {
+    text-align: left;
+
+}
+
+#about-text .left {
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+    padding-left: 23rem;
+}
+
+
+#about-text .right {
+    float: right;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 23rem;
+}
+
+#about-text .text {
+    font-size: 2rem;
 }
