@@ -167,3 +167,33 @@ console.log(zaman.getMilliseconds());
 
 console.log(zaman.getFullYear()-birthday.getFullYear());
 
+
+//! NUMBERS 
+
+let data;
+let data2;
+let data3;
+data = Number("5");
+data2= parseInt("5");
+data3= parseFloat("5.5");
+data3= isNaN("c5");
+
+console.log(data);
+console.log(typeof data);
+
+
+var sayi= 15.6353234523;
+var sayi2 = sayi.toPrecision(3); //3 basamak alır 15.6
+sayi2= sayi.toFixed(3)// virgülden sonra 3 basamak
+
+veri= Math.PI;
+veri= Math.round(3.5);
+veri= Math.round(3.2);
+veri= Math.ceil(3.2); // yukarı yuvarlama
+veri= Math.floor(8.3);// aşağı yuvarlama
+veri= Math.pow(3.2);// karesi için 3^2
+veri= Math.sqrt(81);
+veri= Math.abs(-80);
+veri= Math.min(2,4,5,1,4,0,5,6);
+veri= Math.max(2,4,5,1,4,0,5,6);
+veri= Math.random()*10;
