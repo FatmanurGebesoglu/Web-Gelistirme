@@ -37,4 +37,45 @@ const sabit="3242@gm.com";
 
 //! Değişken Türleri
 
+//?  Primitive Types
 
+//String
+
+let firstname="fatmanur";
+console.log(typeof firstname);
+
+//Number
+
+let age=30;
+console.log(typeof age);
+
+//boolean
+
+let krediKullanımı=false;
+console.log(typeof krediKullanımı);
+
+//undefined
+
+let phone;
+console.log(phone);
+
+//?  Reference Types : Objects
+
+//array
+
+let liste = ["aslı", "kerem", "ahmet"];
+console.log(typeof liste);
+
+//object literals
+
+let address = {
+    city:"istanbul",
+    country:"türkiye",
+}
+console.log(typeof address);
+
+var hesapla = function(){
+    return 0;
+}
+
+console.log(typeof hesapla);
