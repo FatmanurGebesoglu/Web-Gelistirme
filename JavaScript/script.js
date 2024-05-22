@@ -137,3 +137,33 @@ veri3 = (a>b) || (a<c);
 // not !
 
 veri3 =!(a>b);
+
+
+
+//!   DATA OBJECT
+
+let zaman = new Date();
+console.log(zaman);
+console.log( typeof zaman);
+let birthday= new Date(1999,4,12);
+
+// set methods
+
+zaman.setDate(25);
+zaman.setMonth(3);
+zaman.setFullYear(2024);
+zaman.setHours(20);
+
+// get methods
+
+console.log(zaman.getMonth());
+console.log(zaman.getDate());
+console.log(zaman.getFullYear());
+console.log(zaman.getDay());
+console.log(zaman.getHours());
+console.log(zaman.getMinutes());
+console.log(zaman.getSeconds());
+console.log(zaman.getMilliseconds());
+
+console.log(zaman.getFullYear()-birthday.getFullYear());
+
