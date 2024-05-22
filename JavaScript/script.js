@@ -79,3 +79,61 @@ var hesapla = function(){
 }
 
 console.log(typeof hesapla);
+
+
+//! OPERATÖRLER
+
+//?      1-Arimetrik Operatörler + - / * 
+
+let veri;
+const a=10;
+const b=20;
+let d=4;
+veri = a+b;
+veri =a*b;
+veri= a/b;
+veri =a%b;
+veri=d++;
+console.log(veri);
+console.log(typeof veri);
+console.log(d);
+
+
+//?      2-Atama Operatörleri
+
+let veri2;
+veri2=a;
+veri2 +=a; // veri = veri + a;
+veri2 -=a; // veri = veri - a;
+veri2 *=a; // veri = veri * a;
+veri2 /=a; // veri = veri / a;
+veri2 %=a; // veri = veri % a;
+
+
+//?      3-Karşılaştırma Operatörleri
+
+let veri3;
+const c=5;
+veri3 = a==b;
+veri3 = b==c;
+veri3 = 5==="5";
+veri3 = a!=b;
+veri3 = a!==b;
+veri3 = a<b;
+veri3 = b>a;
+veri3 = 5>=5;
+veri3 = b<=c;
+
+//?      4-Mantıksal Operatörler
+
+// and &&
+
+veri3 = (a>b) && (a<c);
+
+// or || 
+
+veri3 = (a>b) || (a<c);
+
+// not !
+
+veri3 =!(a>b);
