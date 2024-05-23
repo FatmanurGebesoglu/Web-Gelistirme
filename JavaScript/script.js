@@ -197,3 +197,97 @@ veri= Math.abs(-80);
 veri= Math.min(2,4,5,1,4,0,5,6);
 veri= Math.max(2,4,5,1,4,0,5,6);
 veri= Math.random()*10;
+
+
+
+//! STRINGS
+
+const namee="fatmanur";
+const lname="gebeşoğlu";
+const agee="23";
+
+let personData;
+
+// string birleştirme
+
+
+personData= namee +""+ lname;
+personData= 'Benim adım '+namee+""+lname+""+'yaşım'+ agee+ ' ve Sakarya\'da yaşıyorum.'
+let hobbies ="kitap okumak dizi izlemek yürüyüş minnoş ile oynamak";
+let hobbiesArray;
+
+personData= namee.concat('',lname);
+personData=personData.toUpperCase();
+personData=personData.toLowerCase();
+
+personData= personData.substring(3,11); // belli bir bölümü alabilmek için
+personData= personData.slice(1,8); // belli arayı alır
+personData = personData.indexOf("t"); // karakter araması yapmak için -1 döndürülürse karakter yok demektir
+personData=personData.replace('fatmanur','nur'); // yer değiştirmek için kullanılır
+const newlength= personData.length;
+
+hobbiesArray= hobbies.split(' '); //boşluğa göre ayırır dizi oluşturur.
+
+
+
+console.log(personData);
+console.log(typeof personData);
+
+//! ARRAYS
+
+
+let nameArray = ["arda", "kerem", "aslı", "mert"];
+let birthdayYears= [1980,1999,2000,2005];
+let mixArray=["arda","yılmaz",1990,null,undefined];
+console.log(nameArray);
+console.log(nameArray.length);
+console.log(typeof nameArray);
+
+// get array item
+
+console.log(nameArray[0]);
+
+// set array item
+
+nameArray[0]="fatmanur";
+console.log(nameArray);
+nameArray[nameArray.length+1]="mehmet";
+
+//add item
+
+nameArray.push("eda");// dizi sonuna eleman ekler
+nameArray.unshift("leyla");//başına eleman ekler
+
+// remove item
+birthdayYears.pop(); // sondan siler
+birthdayYears.shift();// baştan siler
+
+// indexOf
+
+let index = nameArray.indexOf("fatmanur"); // aranan değerin index değerini döndürür
+
+// reverse diziyi ters çevirmek için kullanılır
+
+nameArray.reverse();
+
+
+// sıralamak için
+
+birthdayYears.sort(); // sıralı olarak küçükten büyüğe
+
+
+// dizi birleştirmek için 
+
+let mixArray2 = nameArray.concat(birthdayYears);
+
+
+// silmeden veya silerek ekleme
+nameArray.splice(2,0,"ahmet"); // 2.indexten sonra silme ahmet ekle
+nameArray.splice(2,1,"ahmet"); // 2.indexten sonra sil ahmet ekle
+
+
+
+
+
+
+
