@@ -489,13 +489,75 @@ console.log(num);
 
 
 
+//! FONSİYONLAR 
+
+
+function merhaba(){
+    console.log("merhaba");
+}
+
+
+merhaba();
+
+
+function merhaba2(name,age){
+    console.log(`isim: ${name} yaş: ${age}`);
+}
+
+
+merhaba2("fatmanur",23);
+
+
+function yasHesapla(dogumYili){
+   return 2024-dogumYili;
+}
 
 
 
+// Window Objesi
+
+data5= window;
+console.log(window);
+
+//alert
+
+alert("merhaba");
+
+//prompt
+
+var data6 = prompt("adınızı girin:");
+
+//confirm
+
+var data7= confirm("çıkmak istediğinize emin misiniz? ")
+
+//location  : tarayıcı özellikleri için
+
+var data8 = window.location;
+data8 = window.location.hostname;
+
+console.log(data8);
 
 
 
+//!     SCOPE Kavramı
 
+// oluşturulan değişken nerelerde kullanılıyor bakmak için
+//değişkeni hem blok içinde hem blok dışında kullanılmak isteniyorsa var
+// let ve const blok içinde kullanılırsa blok dışında tanımsız olur
 
+//? Global scope
 
+var globalScope =5;
 
+//? Function scope
+
+function a(){
+    globalScope=0;
+}
+
+//? Block scope
+
+if(true){
+    globalScope=10;
+}
