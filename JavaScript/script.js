@@ -375,4 +375,127 @@ console.log(typeof userData);
 
 
 
+//!   DÖNGÜLER(LOOPS)
+
+
+//?     while
+
+
+let i=0;
+
+while(i<10){
+    console.log(i);
+    i++;
+}
+
+// break ve continue
+
+let f=0;
+while(i<10){
+    console.log(f);
+    if (f==6) {
+        break;
+    }
+    f++;
+}
+
+let m=0;
+while (m<10) {
+    if(m==3){
+        continue;
+    }
+    console.log(m);
+    m++;
+}
+
+//?     Do while
+
+
+let k=0;
+do{
+    console.log(k);
+    k++;
+}while(k<10);
+
+//?     For Loop
+
+
+for (let i=0; i<10; i++){
+    console.log(i);
+}
+
+
+
+
+let toplam =0;
+
+for(let i=0; i<10; i++){
+    toplam +=i;
+    console.log(toplam);
+}
+
+
+//!   DİZİ VE OBJELERDE DÖNGÜ KULLANIMI
+
+let cities = ["istanbul", "ankara", "izmir", "adana","sakarya","karabük"]
+
+
+for(let i=0; i<cities.length;i++){
+    console.log(cities[i]);
+}
+
+
+// for-in
+
+for( let i in cities){
+    console.log(`index: ${i} value: ${cities[i]}`);
+}
+
+
+// for-each
+
+cities.forEach(function(item){
+    console.log(item);
+});
+
+
+let users = [
+    {userName:"aslı",userLastName:"yılmaz"},
+    {userName:"kerem",userLastName:"yılmaz"},
+    {userName:"hüseyin",userLastName:"yılmaz"},
+]
+
+
+for(let i=0; i<users.length; i++){
+    console.log(users[i])
+}
+
+
+//map : retuns an array
+
+let usersData= users.map(function(item){
+    return item.userName+ " " + item.userLastName;
+});
+
+console.log(usersData);
+
+let numbers = [1,2,3,4,5,6,7,8,9];
+
+let num = numbers.map(function(n){
+    return n*n;
+});
+
+console.log(num);
+
+
+
+
+
+
+
+
+
+
+
+
 
