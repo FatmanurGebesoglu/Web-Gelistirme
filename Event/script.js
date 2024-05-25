@@ -67,19 +67,37 @@ ul.addEventListener("mousemove",run);
 
 function run(event){
     console.log(`event type: ${event.type}`);
+    console.log(event.target.value);
 }
 
 
+//! KEYBOARD EVENTLERİ
 
+const text = document.getElementById("txtTaskName");
 
+//focus event
+text.addEventListener("focus",run);
 
+//blur event
+text.addEventListener("blur",run);
 
+//paste event yapıstırma olayı olursa
+text.addEventListener("paste",run);
 
+//copy event
+text.addEventListener("copy",run);
 
+//cut event
+text.addEventListener("cut",run);
 
+//select event
+text.addEventListener("select",run);
 
+//keyDown event
+text.addEventListener("keydown",run);
 
-
+//keyUp event
+text.addEventListener("keyup",run);
 
 
 
