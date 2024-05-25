@@ -32,6 +32,46 @@ console.log(document.querySelector("li:nth-child(2")).style.color = "red"; // so
 console.log(document.querySelector("li")).className = "list-group-item list-group-item primary";
 console.log(document.querySelector("li")).classList.add("active");
 
+//! ÇOKLU ELEMENT SEÇİMİ
+
+// document.getElementsByClassName()
+
+
+veri= document.getElementsByClassName("list-group-item");
+veri= document.getElementsByClassName("list-group-item")[0];
+
+veri[1].style.fontSize="20px";
+veri[1].style.color="red";
+veri[2].textContent="new item"; // içeriğini değiştirmek için
+
+for(let i=0; i<veri.length; i++){
+    console.log(veri[i].style.color="orange");
+}
+
+// document.getElementsByTagName() : elemenları etikete göre seçer
+
+veri= document.getElementsByTagName("li");
+veri= document.getElementById("task-list").getElementsByTagName("a");
+
+
+// document.querySelectorAll()
+
+veri= document.querySelectorAll("li"); // tüm li ler gelir forEach kullanılır
+
+veri.forEach(function(item,index){
+    item.textContent=`${index}-item`;
+})
+
+console.log(veri);
+
+
+
+
+
+
+
+
+
 
 
 
