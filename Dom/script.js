@@ -110,3 +110,32 @@ value=todo.nextElementSibling;
 value=todo.nextElementSibling.nextElementSibling;
 
 console.log(value);
+
+
+//? ELEMENT OLUŞTURMA
+
+const li = document.createElement("li");
+
+// add class
+
+li.className="list-group-item list-group-item-secondary"; // elemente sınıf ekledik
+
+// add id
+li.id="deneme-id"
+
+// title eklemek attribute
+li.setAttribute("title","new item");
+
+const text= document.createTextNode("To do 5");
+li.appendChild(text); // texti atadık
+
+const a = document.createElement("a");
+a.setAttribute("href","#");
+a.className= "delete-item float-right";
+a.innerHTML= '<i class="fas fa-times"><i/>';
+li.appendChild(a);
+
+document.querySelector("#task-list").appendChild(li);
+
+console.log(li);
+
