@@ -32,7 +32,7 @@ console.log(document.querySelector("li:nth-child(2")).style.color = "red"; // so
 console.log(document.querySelector("li")).className = "list-group-item list-group-item primary";
 console.log(document.querySelector("li")).classList.add("active");
 
-//! ÇOKLU ELEMENT SEÇİMİ
+//? ÇOKLU ELEMENT SEÇİMİ
 
 // document.getElementsByClassName()
 
@@ -64,19 +64,49 @@ veri.forEach(function(item,index){
 
 console.log(veri);
 
+//? ELEMENTLER ÜZERİNDE GEZİNME
+
+let value;
+
+const todoList= document.querySelector(".list-group");
+const todo= document.querySelector(".list-group-item:nth-child(2");
+
+value= todoList;
+value=todo;
 
 
 
+// child nodes
 
+value=todoList.childNodes;
 
+value=todoList.children;
+value=todoList.children[0];
+value=todoList.children[1].textContent="değişen madde";
+value=card;
+value=card.children;
+value=card.children[1].children[0].textContent="merhaba";
+value=todoList;
+value=todoList.children[0];
+value=todoList.firstElementChild;
+value=todoList.lastElementChild;
+value=todoList.children.length;
+value=todoList.childElementCount;
+console.log(value);
 
+// parent nodes
 
+value.card;
+value=card.parentElement;
+value=card.parentElement.parentElement;
 
+console.log(value);
 
+// sibling node
 
+value= todo;
+value=todo.previousElementSibling;
+value=todo.nextElementSibling;
+value=todo.nextElementSibling.nextElementSibling;
 
-
-
-
-
-
+console.log(value);
