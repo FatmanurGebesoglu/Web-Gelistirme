@@ -29,6 +29,45 @@ btn.addEventListener("click",function(a){
 
 
 
+//! MOUSE EVENTLERİ
+
+const btn3= document.querySelector("#btnAddNewTask");
+const ul= document.querySelector("#task-list");
+
+
+//click event
+
+btn3.addEventListener("click",run);
+ul.addEventListener("click",run);
+
+//double click event
+
+btn3.addEventListener("dblclick",run);
+
+//mouse down event : tıklanıldığı andan
+btn3.addEventListener("mousedown",run);
+
+//mouse up event : bırakılan anda
+btn3.addEventListener("mouseup",run);
+
+//mouseenter event : her üzerine geldiğinde çalışır
+btn3.addEventListener("mouseenter",run);
+
+//mouseenter leave : üzerinden ayrıldığında çalışır
+btn3.addEventListener("mouseleave",run);
+
+//mouse over : alt elemanlar için de geçerli oluyor
+ul.addEventListener("mouseover",run);
+
+//mouse out : alt elemanlar için de geçerli oluyor
+ul.addEventListener("mouseout",run);
+
+//mouse move event : hareket piksel cinsinden kaydedilir genelde görseller için
+ul.addEventListener("mousemove",run);
+
+function run(event){
+    console.log(`event type: ${event.type}`);
+}
 
 
 
