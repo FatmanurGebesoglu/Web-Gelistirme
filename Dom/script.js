@@ -139,3 +139,33 @@ document.querySelector("#task-list").appendChild(li);
 
 console.log(li);
 
+//?    ELEMENT SİLME
+
+
+const taskList = document.querySelector("#task-lst");
+//taskList.remove(); -----> tüm elemanı sildi
+
+taskList.childNodes[2].remove();
+taskList.children[1].remove(); // ---> daha pratik
+taskList.removeChild(taskList.children[3]);
+
+// attribute silme
+
+taskList.children[1].removeAttribute("class");
+
+
+for(let i=0; i<taskList.children.length; i++){
+    taskList.children[i].removeAttribute("class");
+}
+
+console.log(taskList);
+
+
+
+
+
+
+
+
+
+
