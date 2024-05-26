@@ -1,8 +1,8 @@
 
-// Tarayıcı Depolama Alanları
+//? Tarayıcı Depolama Alanları
 
 
-// Session Storage :: oturum kapatılana kadar tutulur
+//! Session Storage :: oturum kapatılana kadar tutulur
 
 const add = document.querySelector("#add");
 const del = document.querySelector("#delete");
@@ -31,6 +31,32 @@ function clearItem(e){
 
 
 
+//! Local Storage :: bilgiler javascripte silinene kadar durur kalıcıdır
+
+// SetItem değişken tipi ne olurssa olsun string kaydeder
+localStorage.setItem("programlama","javascript");
+localStorage.setItem("bilgisayar",7000);
 
 
-// Local Storage :: bilgiler javascripte silinene kadar durur kalıcıdır
+// GetItem  var olan kayıtlı elemana ulaşmak için kullanılır
+
+const value = localStorage.getItem("programlama");
+console.log(value);
+console.log(typeof value); // burada da string değeri döner her değişken için
+
+// clear local storage
+
+localStorage.clear();
+
+// vei olup olmadığını kontrol etmek için 
+
+console.log(localStorage.getItem("klavye")); //null
+
+if(localStorage.getItem("klavye")===null){
+    console.log("sorgulanan veri bulunamadı");
+}else {
+    console.log("sorgulanan veri bulundu");
+}
+
+
+
