@@ -7,7 +7,11 @@ const input = document.querySelector("#txtTaskName");
 const btnAddNewTask = document.querySelector("#btnAddNewTask");
 const btnDeleteAll = document.querySelector("#btnDeleteAll");
 const taskList = document.querySelector("#task-list");
-const items = ["Todo 1", "Todo 2", "Todo 3", "Todo 4"];
+//const items = ["Todo 1", "Todo 2", "Todo 3", "Todo 4"];
+let todos;
+
+
+
 
 //!load items
 loadItems();
@@ -24,17 +28,35 @@ function eventListeners() {
 }
 
 function loadItems() {
-  items.forEach(function (item) {
-    createItem(item);
-  });
+    todos= getItemsFromLS();
+    todos.forEach(function (item) {
+        createItem(item);
+    });
+}
+// get items from local storage
+function getItemsFromLS(){
+    if(localStorage.getItem("todos")===null){
+        todos=[];
+    }else{
+        todos= JSON.parse(localStorage.getItem("todos"));
+    }
+    return todos;
 }
 
-function createItem(text) {
+// set item to local storage
+
+function setItemToLS(newTodo){
+    todos = getItemsFromLS();
+    todos.push(newTodo);
+    localStorage.setItem("todos",JSON.stringify(todos));
+}
+
+function createItem(newTodo) {
   // li oluşturma
 
   const li = document.createElement("li");
   li.className = "list-group-item list-group-item-secondary";
-  li.appendChild(document.createTextNode(text));
+  li.appendChild(document.createTextNode(newTodo));
 
   // a oluşturma
 
@@ -55,6 +77,8 @@ function addNewItem(e) {
 
   //create item
   createItem(input.value);
+
+  setItemToLS(input.value);
 
   input.value = ""; // input alanını boşaltır
 
