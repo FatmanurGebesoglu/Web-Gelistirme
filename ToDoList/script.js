@@ -7,6 +7,10 @@ const input = document.querySelector("#txtTaskName");
 const btnAddNewTask = document.querySelector("#btnAddNewTask");
 const btnDeleteAll = document.querySelector("#btnDeleteAll");
 const taskList = document.querySelector("#task-list");
+const items = ["Todo 1", "Todo 2", "Todo 3", "Todo 4"];
+
+//!load items
+loadItems();
 
 eventListeners();
 
@@ -16,20 +20,21 @@ function eventListeners() {
   //delete an item
   taskList.addEventListener("click", deleteItem);
   //delete all item
-  btnDeleteAll.addEventListener("click",deleteAllItems);
+  btnDeleteAll.addEventListener("click", deleteAllItems);
 }
 
-function addNewItem(e) {
-  if (input.value === "") {
-    alert("you add item");
-    console.log("submit");
-  }
+function loadItems() {
+  items.forEach(function (item) {
+    createItem(item);
+  });
+}
 
+function createItem(text) {
   // li oluşturma
 
   const li = document.createElement("li");
   li.className = "list-group-item list-group-item-secondary";
-  li.appendChild(document.createTextNode(input.value));
+  li.appendChild(document.createTextNode(text));
 
   // a oluşturma
 
@@ -40,6 +45,16 @@ function addNewItem(e) {
 
   li.appendChild(a);
   taskList.appendChild(li);
+}
+
+function addNewItem(e) {
+  if (input.value === "") {
+    alert("you add item");
+    console.log("submit");
+  }
+
+  //create item
+  createItem(input.value);
 
   input.value = ""; // input alanını boşaltır
 
@@ -49,39 +64,24 @@ function addNewItem(e) {
 //!  Eleman silme
 
 function deleteItem(e) {
-  if (confirm("Silmek istediğinize emin misiniz?")) {
-    if (e.target.className === "fas fa-times") {
+  if (e.target.className === "fas fa-times") {
+    if (confirm("Silmek istediğinize emin misiniz?")) {
       e.target.parentElement.parentElement.remove();
     }
   }
   e.preventDefault();
 }
 
-
-
 //! Tüm elemanları silme
 
-function deleteAllItems(e){
-    if(confirm("Tüm elemanları silmek isteğinize emin misin?")){
-        taskList.childNodes.forEach(function(item){
-            if(item.nodeType===1){
-                item.remove();
-            }
-        });
-    }
-    // taskList.innerHTML=""; ------>  alternatif yöntem hepsini siler
-    e.preventDefault();
+function deleteAllItems(e) {
+  if (confirm("Tüm elemanları silmek isteğinize emin misin?")) {
+    taskList.childNodes.forEach(function (item) {
+      if (item.nodeType === 1) {
+        item.remove();
+      }
+    });
+  }
+  // taskList.innerHTML=""; ------>  alternatif yöntem hepsini siler
+  e.preventDefault();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
