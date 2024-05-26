@@ -91,20 +91,36 @@ function deleteItem(e) {
   if (e.target.className === "fas fa-times") {
     if (confirm("Silmek istediğinize emin misiniz?")) {
       e.target.parentElement.parentElement.remove();
+      deleteTodoFromStorage(e.target.parentElement.parentElement.textContent);
     }
   }
   e.preventDefault();
+}
+
+function deleteTodoFromStorage(deletetodo){
+    let todos = getItemsFromLS();
+    todos.forEach(function(todo,index){
+        if(todo=== deletetodo){
+            todos.splice(index,1);
+        }
+    });
+    localStorage.setItem("todos",JSON.stringify(todos));
 }
 
 //! Tüm elemanları silme
 
 function deleteAllItems(e) {
   if (confirm("Tüm elemanları silmek isteğinize emin misin?")) {
-    taskList.childNodes.forEach(function (item) {
-      if (item.nodeType === 1) {
-        item.remove();
-      }
-    });
+    // taskList.childNodes.forEach(function (item) {
+    //   if (item.nodeType === 1) {
+    //     item.remove();
+    //   }
+    // });
+
+    while(taskList.firstChild){
+        taskList.removeChild(taskList.firstChild);
+    }
+    localStorage.clear();
   }
   // taskList.innerHTML=""; ------>  alternatif yöntem hepsini siler
   e.preventDefault();
