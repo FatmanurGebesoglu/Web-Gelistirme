@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>jquery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+    <a href="#">Link1</a>
+    <h3>Kurslarım</h3>
+    <ul id="liste">
+        <li class="item1">Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        <li>Lorem ipsum dolor sit. <a href="#">Link2</a></li>
+    </ul>
+
+
+
+    <script>
+
+        //javaScript kullanarak
+        //document.getElementById("header").style.color="blue";
+
+        //jquery ile
+        $("#header").css("color","orange");
+        $("#liste a").css("text-decoration","none");
+        $("a").css("text-decoration","none");
+
+        var styles ={
+            color: "blue",
+            fontSize: "22px",
+            border: "1px solid gray",
+        }
+
+        $("ul li").css(styles);
+
+    </script>
+  </body>
+</html>
