@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>jquery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <style></style>
+  </head>
+  <body>
+
+    <div>
+        <p>Sıfırfan İleri Düzey Web Geliştirme Kursu</p>
+        <img src="manzara.jpg" width="150px">
+    </div>
+    <br><br>
+
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+    <button id="toggle">Toggle</button>
+
+    <br><br>
+
+    <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button> 
+    <button id="fadeto">Fade To</button>
+    <button id="fadetoggle">Fade Toggle</button>
+   
+
+    <script>
+      $(document).ready(function () {
+        $("#slideUp").click(function () {
+          $("div").slideUp(3000);
+        });
+        $("#slideDown").click(function () {
+          $("div").slideDown(2000, function () {
+            alert("div gösterildi");
+          });
+        });
+        $("toggle").click(function () {
+          $("div").slideToggle("fast");
+        });
+        $("#fadein").click(function () {
+          $("div").fadeIn("slow");
+        });
+        $("#fadeout").click(function () {
+          $("div").fadeOut(2000, function () {
+            alert("div gösterildi");
+          });
+        });
+        $("#fadeout").click(function () {
+          $("div").fadeTo("slow",0.5);
+        });
+        $("fadetoggle").click(function () {
+          $("div").fadeToggle("fast");
+        });
+      });
+    </script>
+  </body>
+</html>
