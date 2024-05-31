@@ -57,16 +57,25 @@ let elif = new Person("elif",2018,"student");
 
 elif.calculateAge();
 
+//! Object.create Metodu
 
+let personProto = {
+    calculateAge : function () {
+        return 2024 - this.yearOfBirth;
+    }
+}
 
+let mine = Object.create(personProto);
 
+mine.name = "mine";
+mine.yearOfBirth = 2004;
+mine.job = "student";
 
-
-
-
-
-
-
+let murat = Object.create(personProto, {
+    name: {value:"murat"},
+    yearOfBirth: {value: 2000},
+    job: {value: officer},
+});
 
 
 
