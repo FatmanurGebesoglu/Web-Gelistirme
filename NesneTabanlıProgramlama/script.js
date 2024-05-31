@@ -79,3 +79,36 @@ let murat = Object.create(personProto, {
 
 
 
+//! PROTOTYPE Tabanlı Miras Alma
+
+
+let Kisi = function(name,yearOfBirth,job){
+    this.name=name;
+    this.yearOfBirth=yearOfBirth;
+    this.job=job;
+}
+
+Kisi.prototype.calculateAge=function(){
+    return 2024 - this.yearOfBirth;
+}
+
+
+let Teacher = function(name,yearOfBirth,job,subject){
+    Kisi.call(this,name,yearOfBirth,job);
+    this.subject=subject;
+}
+
+// Inherit the Kisi prototype methods
+Teacher.prototype = Object.create.prototype(Person.prototype);
+
+// Set Teacher constructor
+Teacher.prototype.constructor= Teacher;
+
+let hüsniye = new Teacher("hüsniye",1998,"teacher","database");
+
+
+console.log(hüsniye);
+console.log(hüsniye.calculateAge());
+
+
+
